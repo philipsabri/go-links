@@ -6,7 +6,7 @@ client = TestClient(main.app)
 
 def test_redirect(monkeypatch):
     main.config.clear()
-    monkeypatch.setitem(main.config, "gh", "github.com")
+    monkeypatch.setitem(main.config, "gh", "https://github.com")
 
     response = client.get("/gh", follow_redirects=False)
 

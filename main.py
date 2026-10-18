@@ -49,4 +49,4 @@ async def redirect(path):
   if target is None:
     raise HTTPException(status_code=404, detail=f"No redirect configured for {path}")
 
-  return RedirectResponse("https://" + target)
+  return RedirectResponse(target)
